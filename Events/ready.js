@@ -9,9 +9,7 @@ module.exports = (client) => {
 
     let statuses = [
         //`la Maintenance`
-        `*invite`,
-        `*info`,
-        `*help`
+        `prefix *`
     ]
 
     setInterval(function() {
