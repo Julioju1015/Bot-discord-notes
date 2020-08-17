@@ -18,12 +18,4 @@ module.exports = (client) => {
 
     }, 20000);
 
-    let guildToSend = client.guilds.cache.find(g => g.id === "730507720742142052")
-    let channelToSend = guildToSend.channels.cache.find(c => c.id === "734763152104751144")
-
-    const okEmbed = new Discord.MessageEmbed()
-        .setColor("GREEN")
-        .setDescription("Le robot est en ligne <a:yes:734458982566985838>")
-    channelToSend.send(okEmbed)
-
 };
