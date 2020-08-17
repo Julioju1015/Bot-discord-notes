@@ -4,10 +4,10 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 //////////Charg les commandes dans les sous-dossier de ./commandes///////////
-fs.readdirSync("./commandes/").forEach(dirs => {
-    let commands = fs.readdirSync(`./commandes/${dirs}`).filter(files => files.endsWith('.js'))
+fs.readdirSync("./notes/").forEach(dirs => {
+    let commands = fs.readdirSync(`./notes/${dirs}`).filter(files => files.endsWith('.js'))
     for(let file of commands) {
-        let getFileName = require(`./commandes/${dirs}/${file}`)
+        let getFileName = require(`./notes/${dirs}/${file}`)
         client.commands.set(getFileName.help.name, getFileName)
     }
 })
